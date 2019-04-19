@@ -1,0 +1,51 @@
+{
+  "StartAt": "Init",
+  "States": {
+    "Init": {
+      "Type": "Pass",
+      "Result": {
+                "food1": true, 
+                "food2": true, 
+                "toy1": true,
+                "toy2": true,
+                "toy3": false,
+                "cat1": false,
+                "cat2": false,
+                "cat3": false,
+                "cat4": false,
+                "cat5": false
+                },
+      "Next": "checkswitchboard"
+    },
+	  "checkswitchboard": {
+  	  "Comment": "Look for input from user.",
+      "Type": "Pass",
+      "Comment": "Disabled for now.",
+      "Next": "checkcats"
+	  },
+    "checkcats": {
+      "Comment": "See what cats have shown up",
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:980965586942:function:checkcats",
+      "Next": "drawcats"
+    },
+    "drawcats": {
+      "Comment": "Generate an image of the world",
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:980965586942:function:responder",
+      "Next": "delay"
+    },
+    "delay": {
+      "Comment": "Delay a bit",
+      "Type": "Wait",
+      "Seconds": 10,
+      "Next": "cleanup"
+    },
+    "cleanup": {
+      "Comment": "Clear out food bowls and let cats leave",
+      "Type": "Pass",
+      "Comment": "Disabled for now.",
+      "End": true
+    }
+  }
+} 

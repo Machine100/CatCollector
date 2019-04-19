@@ -1,0 +1,52 @@
+Data Structure
+
+
+{backend.py}-----{statemachine}-----{frontendapp.js}
+[machinetable]   [machinetable]     [switchboard]
+.
+----------------------------------------------------------------------------
+
+Cat Stats
+These are the stats for each cat
+
+Key         Attributes ---->
+cat1: true  | Name: Tookie | Food: food1  | toy: toy1 | AppearChance: 20%  
+cat2: true  | Name: Cookie | Food: food1  | toy: toy2 | AppearChance: 60%
+cat3: false | Name: Nookie | Food: food2  | toy: toy1 | AppearChance: 20%
+cat4: false | Name: Sookie | Food: food2  | toy: toy2 | AppearChance: 60%
+cat5: true  | Name: Dooki  | Food: food2  | toy: toy3 | AppearChance: 10%
+.
+-------------------------------------------------------------------------
+
+passed through the state machine       
+       {
+       food1: true, 
+       food2: true, 
+       toy1: true,
+       toy2: true,
+       toy3: false,
+       cat1: true,
+       cat2: false,
+       cat3: true,
+       cat4: false,
+       cat5: true,
+       }
+.
+-------------------------------------------------------------------------
+
+This is a table of the state maintaned as a switchboard:
+A way to transfer state from any source into the state machine.
+
+maintained at dynamo
+       {
+       food1: true,
+       food2: false,
+       toy1: true,
+       toy2: false,
+       toy3: true,
+       cat1: true, 
+       cat2: true,
+       cat3: false,
+       cat4: true,
+       cat5: false,
+       }
