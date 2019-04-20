@@ -1,4 +1,4 @@
-* Cat Collector - Little Cat Rescue
+# Cat Collector - Little Cat Rescue
 Put food out at the dumpster behind the QuickieMart and feed the strays.
 Attract them all with various toys and foods.
 
