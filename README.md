@@ -14,3 +14,4 @@ The back end serverless.
 Front end is a minimal React web page.
 The graphical worldview is generated server-side and stored in S3.
 
+Technologies used: Javascript, React, Lambda, Python, Step Functions, S3, DynamoDB.
