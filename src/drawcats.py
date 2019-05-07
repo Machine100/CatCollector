@@ -1,6 +1,9 @@
 from PIL import Image
 import requests
 from io import BytesIO
+import boto3
+s3 = boto3.client('s3')
+s3resource = boto3.resource('s3')
 
 event = {"food1": True, 
          "food2": True, 
@@ -70,9 +73,16 @@ if event['cat4']:
 if event['cat5']:
 	mainimage.paste(imgcat5,  (0, 0), imgcat5)
 
-mainimage.show()
+#cat5url   = "https://s3.amazonaws.com/derffred/cat5.png"
+#cat5response = requests.get(cat5url)
+#imgcat5  =  Image.open(BytesIO(cat5response.content))
 
-#background = Image.open("house1.png")
-#foreground = Image.open("house2.png")
-#background.paste(foreground, (0, 0), foreground)
-#background.show()	
+mainimage.save('output.png')
+s3resource.Bucket('derffred').upload_file('output.png','output.png')
+#response = s3.put_object(Body={}, Bucket='derffred', Key='Output')
+
+#saveurl  = "https://s3.amazonaws.com/derffred/output.png"
+#mainimage.show()
+#response = mainimage.save(BytesIO(requests.post(saveurl))
+#mainimage.show()
+
