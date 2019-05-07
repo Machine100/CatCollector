@@ -79,6 +79,7 @@ if event['cat5']:
 
 mainimage.save('output.png')
 s3resource.Bucket('derffred').upload_file('output.png','output.png')
+
 #response = s3.put_object(Body={}, Bucket='derffred', Key='Output')
 
 #saveurl  = "https://s3.amazonaws.com/derffred/output.png"
