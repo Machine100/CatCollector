@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class GoFetch extends Component {
 	state = {
 		count: 0,
-		monsterpic: 'https://s3.amazonaws.com/derffred/scribble.jpg'
+		monsterpic: 's3://derffred/outputdestination.png'
 	}
 	render(){
 		const {count} = this.state
