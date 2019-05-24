@@ -9,7 +9,7 @@ The AWS StepFunctions service controls application flow.
 
 The StepFunctions service makes calls to lambda functions written in python. 
 
-The lambda function execute game logic.
+The lambda function executes game logic.
 
 State for the application is maintained within the application in a JSON string. State is also stored in a DynamoDB table to facilitate transfer of data between the front and back ends.
 
