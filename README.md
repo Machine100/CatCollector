@@ -5,6 +5,7 @@ Attract them all with various toys and foods.
 
 Implement a state machine at AWS using the StepFunctions service.
 The state machine makes calls to lambda functions written in python. 
+
 The state machine controls application flow.
 The Lambda functions execute game logic.
 
