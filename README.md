@@ -1,9 +1,9 @@
 # Cat Collector - Little Cat Rescue
 Put food out at the dumpster behind the QuickieMart and feed the strays.
 Attract them all with various toys and foods.
-===================
 
-Serverless backend handles all game logic. Front end is a very minimal web page.
+
+A serverless backend handles all game logic. Front end is a very minimal web page.
 
 The AWS StepFunctions service controls application flow.
 
