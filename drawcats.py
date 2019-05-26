@@ -1,11 +1,14 @@
-import json
+#This function graphically renders the game world.
+
 from botocore.vendored import requests
-from PIL import Image      # Requires this module intalled in a lambda layer
+from PIL import Image
 from io import BytesIO
+import boto3
+
+s3resource = boto3.resource('s3')
 
 def lambda_handler(event, context):
-    # TODO implement
-  
+    	
 	house1url = "https://s3.amazonaws.com/derffred/house1.png"
 	food1url  = "https://s3.amazonaws.com/derffred/food1.png"
 	food2url  = "https://s3.amazonaws.com/derffred/food2.png"
@@ -42,6 +45,8 @@ def lambda_handler(event, context):
 	imgcat4  =  Image.open(BytesIO(cat4response.content))
 	imgcat5  =  Image.open(BytesIO(cat5response.content))
 
+	#event = {"food1": True,"food2": True,"toy1": True,"toy2": True,"toy3": False,"cat1": True,"cat2": False,"cat3": True,"cat4": False,"cat5": True}
+
 	if event['food1']:
 		mainimage.paste(imgfood1, (0, 0), imgfood1)
 	if event['food2']:
@@ -62,6 +67,8 @@ def lambda_handler(event, context):
 		mainimage.paste(imgcat4,  (0, 0), imgcat4)
 	if event['cat5']:
 		mainimage.paste(imgcat5,  (0, 0), imgcat5)
-	# mainimage.show()
-
+	
+	mainimage.save('/tmp/output2.png')
+	s3resource.Bucket('derffred').upload_file('/tmp/output2.png','outputdestination.png')
+		
 	return event

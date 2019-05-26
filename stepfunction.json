@@ -1,0 +1,35 @@
+{
+  "StartAt": "switchboardread",
+  "States": {
+    "switchboardread": {
+      "Comment": "Look for input from user.",
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:980965586942:function:switchboardread",
+      "Next": "checkcats"
+  },
+    "checkcats": {
+      "Comment": "See what cats have shown up",
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:980965586942:function:checkcats",
+      "Next": "drawcats"
+    },
+    "drawcats": {
+      "Comment": "Generate an image of the world",
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:980965586942:function:drawcats",
+      "Next": "delay"
+    },
+    "delay": {
+      "Comment": "Delay a bit",
+      "Type": "Wait",
+      "Seconds": 10,
+      "Next": "cleanup"
+    },
+    "cleanup": {
+      "Comment": "Clear out food bowls and let cats leave",
+      "Type": "Pass",
+      "Comment": "Disabled for now.",
+      "End": true
+    }
+  }
+} 
