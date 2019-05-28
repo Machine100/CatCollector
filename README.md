@@ -15,7 +15,7 @@ The lambda functions execute game logic.
 
 State for the application is maintained within the application using a JSON string. The string is passed from lambda to lambda through the StepFunctions service. To facilitate transfer of data between the front and back ends, another state is maintained in a dynamoDB table.
 
-A graphical worldview is generated server-side and stored in S3 as a .png image. The graphic is then displayed to the user by the front end.
+A graphical worldview is generated server-side and stored in S3 as a .png file. The graphic is then displayed to the user by the front end.
 
 
 Technologies used: Javascript, React, Lambda, Python, AWS Step Functions, S3, DynamoDB, IAM.
