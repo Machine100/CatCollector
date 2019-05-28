@@ -4,7 +4,6 @@ Attract them all with various toys and foods.
 
 
 
-A web implementation of the Neko Astume game.
 
 A serverless backend handles all game logic. The front end is a minimal web page.
 
