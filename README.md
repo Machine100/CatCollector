@@ -5,7 +5,7 @@ Attract them all with various toys and foods.
 
 
 
-A serverless backend handles all game logic. The front end is a minimal web page.
+A serverless backend handles game logic. The front end is a minimal web page.
 
 The AWS StepFunctions service controls application flow.
 
