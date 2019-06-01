@@ -69,7 +69,7 @@ def lambda_handler(event, context):
 	if event['cat5']:
 		mainimage.paste(imgcat5,  (0, 0), imgcat5)
 	
-	mainimage.save('/tmp/output2.png')
-	s3resource.Bucket('derffred').upload_file('/tmp/output2.png','outputdestination.png')
+	mainimage.save('/tmp/tempfile.png')
+	s3resource.Bucket('derffred').upload_file('/tmp/tempfile.png','worldview.png', ExtraArgs={'ACL':'public-read'})
 		
 	return event
