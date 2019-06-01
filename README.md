@@ -7,11 +7,11 @@ Attract them all with various toys and foods.
 
 A serverless backend handles game logic. The front end is a minimal web page.
 
-The AWS StepFunctions service controls application flow.
+AWS StepFunctions service controls application flow.
 
-The StepFunctions service makes calls to lambda functions written in python. 
+AWS StepFunctions service makes calls to lambda functions written in python. 
 
-The lambda functions execute game logic.
+AWS lambda functions execute game logic.
 
 State for the application is maintained within the application using a JSON string. The string is passed from lambda to lambda through the StepFunctions service. To facilitate transfer of data between the front and back ends, another state is maintained in a dynamoDB table.
 
