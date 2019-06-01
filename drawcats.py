@@ -1,4 +1,5 @@
-#This function graphically renders the game world.
+# This function graphically renders the game world.
+# This function has a dependency at lambda that the AWS layers service provide the PIL library for import. 
 
 from botocore.vendored import requests
 from PIL import Image

@@ -1,4 +1,4 @@
-#This function determines which cats will appear in the game world based on the food and toys put out. 
+#This function determines which cats will appear in the game world based on which food and toys were selected by the user. 
 
 def lambda_handler(event, context):
     

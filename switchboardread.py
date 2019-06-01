@@ -1,6 +1,8 @@
 # This function checks for input from the user.
 # Users add food and toys to the game world through a DynamoDB table named switchboard.
-# Changes at the switchboard are brought into the JSON string that is passed through the state machine.
+# Changes at the switchboard are brought into a JSON string that is maintained by the state machine.
+# The main purpose of this function is to bring front end requests by the user into the application's back end step function.
+
 
 def lambda_handler(event, context):
 
