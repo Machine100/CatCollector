@@ -1,0 +1,24 @@
+.additemsbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  max-width: 60em;
+}
+
+.removeitemsbox {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  max-width: 60em;
+}
+
+.worldbox {
+  display:grid;
+  justify-content: center;
+  max-width:60em;
+}
+
+.delivertoys {
+  display:grid;
+  max-width:60em;
+}
