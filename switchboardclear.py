@@ -1,3 +1,5 @@
+# This fuction is not yet implemented.
+# This function will clear cats and food from the game world after a period of time.
 
 import boto3
 
