@@ -1,7 +1,10 @@
 # Cat Collector - Little Cat Rescue
-Put food out at the dumpster behind the QuickieMart and feed the strays.
-Attract them all with various toys and foods.
 
+live at endpoint http://ccccollector.s3-website-us-east-1.amazonaws.com
+
+6/19 Current status: Initial project goals have been achieved and this project is no longer in active development.
+
+This is a graphical game where users place food and toys out at the dumpster behind the QuickieMart to feed the strays.
 
 The front end is a single-page webapp that makes calls to lambdas through APIGateway.
 
@@ -19,8 +22,6 @@ State within the step function is maintained in a JSON string. The string is pas
 
 
 Technologies used: Javascript, React, Lambda, Python, AWS Step Functions, S3, DynamoDB, IAM.
-
-6/19 Current status: Initial goals have been achieved. A MP is live at endpoint http://ccccollector.s3-website-us-east-1.amazonaws.com
 
 A few issues: MVP needs browser cache to be disabled. Web page needs to be refreshed manually. The deliver button needs to manually depressed. None of this is ideal. These are limitations of the basic web-service architecture - primarily that DynamoDB is not a database that will live-sync to the client. It is a web service running over http and therefore push notifications from the back end are not possible without setting up something complicated similar to websockets.
 
