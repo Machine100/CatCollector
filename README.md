@@ -1,8 +1,8 @@
 # Cat Collector - Little Cat Rescue
 
-live at endpoint http://ccccollector.s3-website-us-east-1.amazonaws.com
+Live at endpoint http://ccccollector.s3-website-us-east-1.amazonaws.com
 
-6/19 Current status: Initial project goals have been achieved and this project is no longer in active development.
+6/19 Current status: Project goals have been completed. This project is no longer in active development.
 
 This is a graphical game where users place food and toys out at the dumpster behind the QuickieMart to feed the strays.
 
