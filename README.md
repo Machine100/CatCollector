@@ -1,6 +1,6 @@
 # Cat Collector - Little Cat Rescue
 
-Live at endpoint http://ccccollector.s3-website-us-east-1.amazonaws.com
+Live at endpoint http://ccccollector.s3-website-us-east-1.amazonaws.com. Your browser cache must be disabled.
 
 6/19 Current status: Project goals have been completed. This project is no longer in active development.
 
